@@ -119,7 +119,7 @@ export function HomePage({ onNavigate }: HomePageProps) {
     {
       name: "Sarah Johnson",
       role: "CEO, TechStart Inc",
-      content: "CodeCraft transformed our vision into reality. Their team's expertise in AI automation helped us reduce operational costs by 40%.",
+      content: "CodeZone transformed our vision into reality. Their team's expertise in AI automation helped us reduce operational costs by 40%.",
       rating: 5,
     },
     {
@@ -131,7 +131,7 @@ export function HomePage({ onNavigate }: HomePageProps) {
     {
       name: "Emily Rodriguez",
       role: "CTO, FinanceFlow",
-      content: "Professional, reliable, and innovative. CodeCraft delivered our mobile app on time and it's been performing flawlessly.",
+      content: "Professional, reliable, and innovative. CodeZone delivered our mobile app on time and it's been performing flawlessly.",
       rating: 5,
     },
   ];
@@ -174,7 +174,7 @@ export function HomePage({ onNavigate }: HomePageProps) {
             <Button
               size="lg"
               variant="outline"
-              className="border-white text-white hover:bg-white hover:text-black transition-all"
+              className="bg-white text-black hover:bg-yellow-500 hover:shadow-lg hover:shadow-yellow-400/50 transition-all"
               onClick={() => onNavigate("portfolio")}
             >
               View Portfolio
@@ -203,7 +203,7 @@ export function HomePage({ onNavigate }: HomePageProps) {
         <div className="max-w-7xl mx-auto">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="mb-6">About CodeCraft</h2>
+              <h2 className="mb-6">About CodeZone</h2>
               <p className="text-gray-600 mb-4">
                 We're a team of passionate developers, designers, and innovators dedicated to 
                 building software that makes a difference. With over a decade of experience, 
@@ -293,7 +293,7 @@ export function HomePage({ onNavigate }: HomePageProps) {
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white text-black">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="mb-4">Why Choose CodeCraft?</h2>
+            <h2 className="mb-4">Why Choose CodeZone?</h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
               We combine expertise, innovation, and dedication to deliver exceptional results
             </p>

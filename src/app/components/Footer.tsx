@@ -10,7 +10,7 @@ export function Footer() {
             <div className="mb-4">
               <span className="text-2xl tracking-tight">
                 <span className="text-white">Code</span>
-                <span className="text-yellow-400">Craft</span>
+                <span className="text-yellow-400">Zone</span>
               </span>
             </div>
             <p className="text-gray-400 text-sm mb-4">
@@ -65,8 +65,8 @@ export function Footer() {
             <ul className="space-y-3 text-sm text-gray-400">
               <li className="flex items-start gap-2">
                 <Mail className="w-4 h-4 mt-0.5 text-yellow-400" />
-                <a href="mailto:info@codecraft.com" className="hover:text-yellow-400 transition-colors">
-                  info@codecraft.com
+                <a href="mailto:info@codezone.com" className="hover:text-yellow-400 transition-colors">
+                  info@codezone.com
                 </a>
               </li>
               <li className="flex items-start gap-2">
@@ -85,7 +85,7 @@ export function Footer() {
 
         {/* Bottom Bar */}
         <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-gray-400">
-          <p>&copy; 2024 CodeCraft. All rights reserved.</p>
+          <p>&copy; 2024 CodeZone. All rights reserved.</p>
           <div className="flex gap-6">
             <a href="#" className="hover:text-yellow-400 transition-colors">Privacy Policy</a>
             <a href="#" className="hover:text-yellow-400 transition-colors">Terms of Service</a>

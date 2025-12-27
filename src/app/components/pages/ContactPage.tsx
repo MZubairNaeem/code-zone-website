@@ -26,8 +26,8 @@ export function ContactPage() {
     {
       icon: Mail,
       title: "Email Us",
-      content: "info@codecraft.com",
-      subContent: "hello@codecraft.com",
+      content: "info@codezone.com",
+      subContent: "hello@codezone.com",
     },
     {
       icon: Phone,
@@ -192,7 +192,7 @@ export function ContactPage() {
               </div>
 
               <Card className="p-6">
-                <h3 className="mb-4">Why Choose CodeCraft?</h3>
+                <h3 className="mb-4">Why Choose CodeZone?</h3>
                 <ul className="space-y-3 text-gray-600">
                   <li className="flex items-start gap-2">
                     <span className="text-yellow-400 mt-1">✓</span>

@@ -54,7 +54,7 @@ export function AboutPage() {
       {/* Hero Section */}
       <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
-          <h1 className="mb-6">About CodeCraft</h1>
+          <h1 className="mb-6">About CodeZone</h1>
           <p className="text-xl text-gray-400">
             We're a forward-thinking software house dedicated to building intelligent, 
             scalable solutions that empower businesses to thrive in the digital age.
@@ -69,7 +69,7 @@ export function AboutPage() {
             <div>
               <h2 className="mb-6">Our Story</h2>
               <p className="text-gray-600 mb-4">
-                Founded in 2014, CodeCraft emerged from a simple belief: that technology 
+                Founded in 2014, CodeZone emerged from a simple belief: that technology 
                 should be a catalyst for growth, not a barrier. What started as a small team 
                 of passionate developers has grown into a full-service software house serving 
                 clients across the globe.

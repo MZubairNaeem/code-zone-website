@@ -30,7 +30,7 @@ export function Header({ activePage, onNavigate }: HeaderProps) {
           >
             <span className="text-2xl tracking-tight">
               <span className="text-white">Code</span>
-              <span className="text-yellow-400">Craft</span>
+              <span className="text-yellow-400">Zone</span>
             </span>
           </div>
 

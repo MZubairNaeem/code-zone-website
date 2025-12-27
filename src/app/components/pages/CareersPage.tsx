@@ -140,9 +140,9 @@ export function CareersPage() {
         <div className="max-w-7xl mx-auto">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="mb-6">Why CodeCraft?</h2>
+              <h2 className="mb-6">Why CodeZone?</h2>
               <p className="text-gray-400 mb-6">
-                At CodeCraft, we believe that great software comes from great teams. 
+                At CodeZone, we believe that great software comes from great teams. 
                 We foster a culture of innovation, collaboration, and continuous learning 
                 where everyone's ideas are valued and creativity thrives.
               </p>

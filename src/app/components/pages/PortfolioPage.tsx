@@ -142,7 +142,7 @@ export function PortfolioPage() {
                 className={
                   activeFilter === category
                     ? "bg-yellow-400 text-black hover:bg-yellow-500"
-                    : "border-white/20 text-white hover:bg-white/10"
+                    : "border-white/20 text-black hover:bg-white/70"
                 }
               >
                 {category.charAt(0).toUpperCase() + category.slice(1)}
