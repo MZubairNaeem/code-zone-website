@@ -279,7 +279,7 @@ export function HomePage({ onNavigate }: HomePageProps) {
           <div className="text-center mt-12">
             <Button
               variant="outline"
-              className="border-yellow-400 text-yellow-400 hover:bg-yellow-400 hover:text-black"
+              className="bg-yellow-400 text-black border border-yellow-400 hover:bg-white hover:text-black transition-colors duration-300"
               onClick={() => onNavigate("services")}
             >
               View All Services

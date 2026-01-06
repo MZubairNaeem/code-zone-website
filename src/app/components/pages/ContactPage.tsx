@@ -3,7 +3,7 @@ import { Card } from "../ui/card";
 import { Input } from "../ui/input";
 import { Label } from "../ui/label";
 import { Textarea } from "../ui/textarea";
-import { Mail, Phone, MapPin, Send, Clock, Globe } from "lucide-react";
+import { Mail, Phone, MapPin, Send, Clock, Globe, Laptop } from "lucide-react";
 import { useState } from "react";
 
 export function ContactPage() {
@@ -26,20 +26,22 @@ export function ContactPage() {
     {
       icon: Mail,
       title: "Email Us",
-      content: "info@codezone.com",
-      subContent: "hello@codezone.com",
+      content: "uzairbsse955@gmail.com",
+      subContent: "fatimarahmanullah34@gmail.com",
+      extraContent: "teamcodezone@gmail.com"
     },
     {
       icon: Phone,
       title: "Call Us",
-      content: "+1 (234) 567-890",
-      subContent: "+1 (234) 567-891",
+      content: "+92 3173952593",
+      subContent: "+92 3239965523",
     },
     {
-      icon: MapPin,
-      title: "Visit Us",
-      content: "123 Tech Street",
-      subContent: "Silicon Valley, CA 94025",
+      icon: Laptop,
+      title: "Meet Us Online",
+      linkUrl: "https://www.linkedin.com/company/code-zone12",
+      linkText: "Follow Code-Zone on LinkedIn",
+      subContent: "We've traded the office for the cloud..."
     },
     {
       icon: Clock,
@@ -67,18 +69,33 @@ export function ContactPage() {
         <div className="max-w-7xl mx-auto">
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {contactInfo.map((info, index) => {
-              const Icon = info.icon;
-              return (
-                <Card key={index} className="p-6 bg-white/5 border-white/10 hover:bg-white/10 transition-all text-center">
-                  <div className="w-14 h-14 bg-yellow-400/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <Icon className="w-7 h-7 text-yellow-400" />
-                  </div>
-                  <h3 className="mb-3 text-white">{info.title}</h3>
-                  <p className="text-gray-400 text-sm mb-1">{info.content}</p>
-                  <p className="text-gray-400 text-sm">{info.subContent}</p>
-                </Card>
-              );
-            })}
+  const Icon = info.icon;
+  return (
+        <Card key={index} className="p-6 bg-white/5 border-white/10 hover:bg-white/10 transition-all text-center">
+        <div className="w-14 h-14 bg-yellow-400/10 rounded-full flex items-center justify-center mx-auto mb-4">
+        <Icon className="w-7 h-7 text-yellow-400" />
+        </div>
+        <h3 className="mb-3 text-white">{info.title}</h3>
+      
+        {info.content && <p className="text-gray-400 text-sm mb-1">{info.content}</p>}
+      
+        {info.linkUrl && (
+          <a 
+            href={info.linkUrl} 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            /* Change text-yellow-400 to text-white and keep hover:text-yellow-400 */
+            className="text-white hover:text-yellow-400 hover:underline text-sm mb-1 block transition-colors"
+            >
+              {info.linkText}
+          </a>
+      )}
+      
+      <p className="text-gray-400 text-sm">{info.subContent}</p>
+      {info.extraContent && <p className="text-gray-400 text-sm">{info.extraContent}</p>}
+    </Card>
+  );
+})}
           </div>
         </div>
       </section>
@@ -110,7 +127,7 @@ export function ContactPage() {
                     type="email"
                     value={formData.email}
                     onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                    placeholder="john@example.com"
+                    placeholder="infocodezone@example.com"
                     required
                     className="mt-2"
                   />
