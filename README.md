@@ -9,3 +9,14 @@
 
   Run `npm run dev` to start the development server.
   
+  pwd for present working directory
+  cd for change directory
+  code [foldername] for opening in vscode 
+  cd .. for going back one step
+
+
+  git add .
+  git commit -m "[any message]"
+  git push 
+
+
