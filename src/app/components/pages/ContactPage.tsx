@@ -1,10 +1,12 @@
+import { Clock, Globe, Mail, MapPin, Phone, Send,Laptop } from "lucide-react";
+import { useState } from "react";
+import supabase  from "../../../utils/supabase";
 import { Button } from "../ui/button";
 import { Card } from "../ui/card";
 import { Input } from "../ui/input";
 import { Label } from "../ui/label";
 import { Textarea } from "../ui/textarea";
-import { Mail, Phone, MapPin, Send, Clock, Globe, Laptop } from "lucide-react";
-import { useState } from "react";
+
 
 export function ContactPage() {
   const [formData, setFormData] = useState({
@@ -16,11 +18,51 @@ export function ContactPage() {
     message: "",
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // Handle form submission
-    console.log("Form submitted:", formData);
-  };
+const handleSubmit = async (e: React.FormEvent) => {
+  console.log("Submitting form with data:", formData);
+  e.preventDefault();
+
+  // basic frontend validation
+  if (
+    !formData.name ||
+    !formData.email ||
+    !formData.phone ||
+    !formData.service ||
+    !formData.message
+  ) {
+    alert("Please fill all required fields");
+    return;
+  }
+
+  const { error } = await supabase.from("messages").insert([
+    {
+      fullName: formData.name,
+      email: formData.email,
+      phoneNumber: formData.phone,
+      companyName: formData.company || null,
+      serviceInterestedIn: formData.service,
+      message: formData.message,
+    },
+  ]);
+
+  if (error) {
+    console.error(error);
+    alert("Failed to send message");
+    return;
+  }
+
+  alert("Message sent successfully!");
+
+  // reset form
+  setFormData({
+    name: "",
+    email: "",
+    phone: "",
+    company: "",
+    service: "",
+    message: "",
+  });
+};
 
   const contactInfo = [
     {
@@ -142,6 +184,7 @@ export function ContactPage() {
                     onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                     placeholder="+1 (234) 567-890"
                     className="mt-2"
+                    required
                   />
                 </div>
 
@@ -160,6 +203,7 @@ export function ContactPage() {
                   <Label htmlFor="service">Service Interested In</Label>
                   <select
                     id="service"
+                    required
                     value={formData.service}
                     onChange={(e) => setFormData({ ...formData, service: e.target.value })}
                     className="mt-2 w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-yellow-400"
